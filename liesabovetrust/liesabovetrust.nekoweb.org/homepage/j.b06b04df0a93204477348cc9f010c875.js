@@ -1,7 +1,7 @@
 // @ts-check
 window.addEventListener("load", () => {
 
-    document.body.addEventListener("resize", () => setGridValueProperty())
+    window.addEventListener("resize", () => setGridValueProperty())
 
     const tableOfEntries2 = document.getElementById("updates-entries")
 

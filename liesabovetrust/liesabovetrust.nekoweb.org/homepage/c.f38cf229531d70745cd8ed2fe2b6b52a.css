@@ -144,7 +144,7 @@
 }
 
 @container style(--grid-width < 8) {
-    .right-content {
+    #right-content {
         grid-area: span 6 / span 3;
     }
 }
