@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Changelogs on LiesAboveTrust powered by GoHugo</title>
-    <link>http://localhost:1313/changelogs/</link>
+    <link>https://liesabovetrust.nekoweb.org/changelogs/</link>
     <description>Recent content in Changelogs on LiesAboveTrust powered by GoHugo</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/changelogs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://liesabovetrust.nekoweb.org/changelogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>v0.1</title>
-      <link>http://localhost:1313/changelogs/v0.1/</link>
+      <link>https://liesabovetrust.nekoweb.org/changelogs/v0.1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/changelogs/v0.1/</guid>
+      <guid>https://liesabovetrust.nekoweb.org/changelogs/v0.1/</guid>
       <description>&lt;h3&gt;Changes:&lt;/h3&gt;&#xD;&#xA;&lt;ul&gt;&#xD;&#xA;    &lt;li&gt;Added a button on the main page for others to use.&lt;/li&gt;&#xD;&#xA;&lt;/ul&gt;&#xD;&#xA;&lt;h3&gt;Fixes:&lt;/h3&gt;&#xD;&#xA;&lt;ul&gt;&#xD;&#xA;    &lt;li&gt;Fixed issues with scrollers on the main page.&lt;/li&gt;&#xD;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>v0.2</title>
-      <link>http://localhost:1313/changelogs/v0.2/</link>
+      <link>https://liesabovetrust.nekoweb.org/changelogs/v0.2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/changelogs/v0.2/</guid>
+      <guid>https://liesabovetrust.nekoweb.org/changelogs/v0.2/</guid>
       <description>&lt;h3&gt;Changes:&lt;/h3&gt;&#xD;&#xA;&lt;ul&gt;&#xD;&#xA;    &lt;li&gt;Split main.css into main.css and mainmage.css&lt;/li&gt;&#xD;&#xA;    &lt;li&gt;Experimenting with CSS @containers x JS&#xD;&#xA;        &lt;br&gt;to make layout for different sizes of screen.&#xD;&#xA;        &lt;br&gt;&lt;b&gt;Not finished.&lt;/b&gt;&lt;/li&gt;&#xD;&#xA;    &lt;li&gt;Updated changelogs.css&lt;/li&gt;&#xD;&#xA;    &lt;li&gt;Updated &lt;a href=&#34;../clocks&#34;&gt;clocks&lt;/a&gt;.css (CTRL+F5)&lt;/li&gt;&#xD;&#xA;    &lt;li&gt;Updated according JS files for new styles.&lt;/li&gt;&#xD;&#xA;&lt;/ul&gt;&#xD;&#xA;&lt;h3&gt;Fixes:&lt;/h3&gt;&#xD;&#xA;&lt;ul&gt;&#xD;&#xA;    &lt;li&gt;&lt;del&gt;Fixed mainpage typo:&#xD;&#xA;        &lt;br&gt;&#34;like... that idk...&#34; -&gt; &#34;like that... idk...&#34;&lt;/del&gt;&lt;/li&gt;&#xD;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>v0.3</title>
-      <link>http://localhost:1313/changelogs/v0.3/</link>
+      <link>https://liesabovetrust.nekoweb.org/changelogs/v0.3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/changelogs/v0.3/</guid>
+      <guid>https://liesabovetrust.nekoweb.org/changelogs/v0.3/</guid>
       <description>&lt;h3&gt;Changes:&lt;/h3&gt;&#xD;&#xA;&lt;ul&gt;&#xD;&#xA;    &lt;li&gt;mainpage -&gt; homepage&lt;/li&gt;&#xD;&#xA;    &lt;li&gt;Added &lt;a href=&#34;../lies&#34;&gt;&#39;lies&#39;&lt;/a&gt; page that is accessed with He/They on the homepage.&lt;/li&gt;&#xD;&#xA;    &lt;li&gt;Moved todo.html to the homepage.&lt;/li&gt;&#xD;&#xA;    &lt;li&gt;not_found.html is nicer.&lt;/li&gt;&#xD;&#xA;    &lt;li&gt;Updated changelogs.css&lt;/li&gt;&#xD;&#xA;    &lt;li&gt;Added &lt;span class=&#34;text-wavy&#34;&gt;adaptive&lt;/span&gt; text &lt;span class=&#34;text-woke&#34;&gt;formatting script&lt;/span&gt; &#xD;&#xA;        that allows for various &lt;span class=&#34;text-wavy text-woke&#34;&gt;text animations&lt;/span&gt; on all of the website&lt;/li&gt;&#xD;&#xA;&lt;/ul&gt;&#xD;&#xA;&lt;h3&gt;Fixes:&lt;/h3&gt;&#xD;&#xA;&lt;ul&gt;&#xD;&#xA;    &lt;li&gt;Fixed mainpage typo:&#xD;&#xA;        &lt;br&gt;&#34;like... that idk...&#34; -&gt; &#34;like that... idk...&#34;&#xD;&#xA;        &lt;br&gt;&lt;b&gt;now actually fixed.&lt;/b&gt;&#xD;&#xA;    &lt;/li&gt;&#xD;&#xA;    &lt;li&gt;Fixed &lt;a href=&#34;../clocks/&#34;&gt;clocks&lt;/a&gt; having link underlines&lt;/li&gt;&#xD;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>v0.3.1</title>
-      <link>http://localhost:1313/changelogs/v0.3.1/</link>
+      <link>https://liesabovetrust.nekoweb.org/changelogs/v0.3.1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/changelogs/v0.3.1/</guid>
-      <description>&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;mainpage -&amp;gt; homepage&lt;/li&gt;&#xA;&lt;li&gt;Added &amp;rsquo;lies&amp;rsquo; page that is accessed with He/They on the homepage.&lt;/li&gt;&#xA;&lt;li&gt;Moved todo.html to the homepage.&lt;/li&gt;&#xA;&lt;li&gt;not_found.html is nicer.&lt;/li&gt;&#xA;&lt;li&gt;Updated changelogs.css&lt;/li&gt;&#xA;&lt;li&gt;Added &lt;span class=&#34;text-wavy &#34;&gt;adaptive&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA; text &lt;span class=&#34;text-woke &#34;&gt;formatting script&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA; that allows for various &lt;span class=&#34;text-wavy text-woke &#34;&gt;text animations&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA; on all of website&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;fixes&#34;&gt;Fixes:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Fixed mainpage typo:&lt;br&gt;&#xA;&amp;ldquo;like&amp;hellip; that idk&amp;hellip;&amp;rdquo; -&amp;gt; &amp;ldquo;like that&amp;hellip; idk&amp;hellip;&amp;rdquo;&lt;br&gt;&#xA;now actually fixed.&lt;/li&gt;&#xA;&lt;li&gt;Fixed &lt;a href=&#34;http://localhost:1313/clocks/&#34;&gt;clocks&lt;/a&gt; having link underlines&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <guid>https://liesabovetrust.nekoweb.org/changelogs/v0.3.1/</guid>
+      <description>&lt;h3 id=&#34;changes&#34;&gt;Changes:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;mainpage -&amp;gt; homepage&lt;/li&gt;&#xA;&lt;li&gt;Added &amp;rsquo;lies&amp;rsquo; page that is accessed with He/They on the homepage.&lt;/li&gt;&#xA;&lt;li&gt;Moved todo.html to the homepage.&lt;/li&gt;&#xA;&lt;li&gt;not_found.html is nicer.&lt;/li&gt;&#xA;&lt;li&gt;Updated changelogs.css&lt;/li&gt;&#xA;&lt;li&gt;Added &lt;span class=&#34;text-wavy &#34;&gt;adaptive&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA; text &lt;span class=&#34;text-woke &#34;&gt;formatting script&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA; that allows for various &lt;span class=&#34;text-wavy text-woke &#34;&gt;text animations&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA; on all of website&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;fixes&#34;&gt;Fixes:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Fixed mainpage typo:&lt;br&gt;&#xA;&amp;ldquo;like&amp;hellip; that idk&amp;hellip;&amp;rdquo; -&amp;gt; &amp;ldquo;like that&amp;hellip; idk&amp;hellip;&amp;rdquo;&lt;br&gt;&#xA;now actually fixed.&lt;/li&gt;&#xA;&lt;li&gt;Fixed &lt;a href=&#34;https://liesabovetrust.nekoweb.org/clocks/&#34;&gt;clocks&lt;/a&gt; having link underlines&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>v0.4</title>
-      <link>http://localhost:1313/changelogs/v0.4/</link>
+      <link>https://liesabovetrust.nekoweb.org/changelogs/v0.4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/changelogs/v0.4/</guid>
-      <description>&lt;h3 id=&#34;changes&#34;&gt;Changes&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Added &lt;a href=&#34;https://petrapixel.neocities.org&#34;&gt;Petrapixel&lt;/a&gt;&#xA;button for having a nice page with useful tutorials.&lt;/li&gt;&#xA;&lt;li&gt;New todos.&lt;/li&gt;&#xA;&lt;li&gt;Made He/They look &amp;ldquo;more clickable&amp;rdquo;.&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;h1 id=&#34;hahahugoshortcode15s0hbhb&#34;&gt;&lt;span class=&#34;text-woke text-wavy &#34;&gt;Migrated the whole website to Gohugo&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;/h1&gt;&#xA;Changes caused by migration:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Added cache-busting.&lt;/li&gt;&#xA;&lt;li&gt;&lt;del&gt;Uploaded the website to Github for version control &amp;amp; to opensource&lt;/del&gt;.&#xA;&lt;ul&gt;&#xA;&lt;li&gt;not yet, need to rewrite Lies first.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Standardized styles across all website.&lt;/li&gt;&#xA;&lt;li&gt;All of website&amp;rsquo;s images not can be accessed with &lt;a href=&#34;http://localhost:1313/assets/&#34;&gt;&amp;lsquo;assets&amp;rsquo;&lt;/a&gt; and &lt;a href=&#34;http://localhost:1313/e/&#34;&gt;&amp;rsquo;e&amp;rsquo;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;fixes&#34;&gt;Fixes:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Fixed #gaypng on lies page being too big when viewed on mobile.&lt;/li&gt;&#xA;&lt;li&gt;Fixed &lt;span class=&#34;text-woke &#34;&gt;text-woke&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA; having the wrong interpolation.&lt;/li&gt;&#xA;&lt;li&gt;Fixed Virkroz button having Blin&amp;rsquo;s alt and title.&lt;/li&gt;&#xA;&lt;li&gt;Fixed one of the homepage&amp;rsquo;s elements being defined in base.css&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <guid>https://liesabovetrust.nekoweb.org/changelogs/v0.4/</guid>
+      <description>&lt;h3 id=&#34;changes&#34;&gt;Changes&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Added &lt;a href=&#34;https://petrapixel.neocities.org&#34;&gt;Petrapixel&lt;/a&gt;&#xA;button for having a nice page with useful tutorials.&lt;/li&gt;&#xA;&lt;li&gt;New todos.&lt;/li&gt;&#xA;&lt;li&gt;Made He/They look &amp;ldquo;more clickable&amp;rdquo;.&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;h1 id=&#34;hahahugoshortcode18s0hbhb&#34;&gt;&lt;span class=&#34;text-woke text-wavy &#34;&gt;Migrated the whole website to Gohugo&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;/h1&gt;&#xA;Changes caused by migration:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Added cache-busting.&lt;/li&gt;&#xA;&lt;li&gt;Removed lies.&lt;/li&gt;&#xA;&lt;li&gt;Uploaded the website to Github for version control &amp;amp; to opensource.&lt;/li&gt;&#xA;&lt;li&gt;Standardized styles across all website.&lt;/li&gt;&#xA;&lt;li&gt;All of website&amp;rsquo;s images not can be accessed with &lt;a href=&#34;https://liesabovetrust.nekoweb.org/assets/&#34;&gt;&amp;lsquo;assets&amp;rsquo;&lt;/a&gt; and &lt;a href=&#34;https://liesabovetrust.nekoweb.org/e/&#34;&gt;&amp;rsquo;e&amp;rsquo;&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;fixes&#34;&gt;Fixes:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;del&gt;Fixed #gaypng on lies page being too big when viewed on mobile.&lt;/del&gt;&lt;/li&gt;&#xA;&lt;li&gt;Fixed &lt;span class=&#34;text-woke &#34;&gt;text-woke&lt;/span&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA; having the wrong interpolation.&lt;/li&gt;&#xA;&lt;li&gt;Fixed Virkroz button having Blin&amp;rsquo;s alt and title.&lt;/li&gt;&#xA;&lt;li&gt;Fixed one of the homepage&amp;rsquo;s elements being defined in base.css&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>
