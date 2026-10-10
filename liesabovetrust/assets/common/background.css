@@ -1,0 +1,46 @@
+@property --time {
+    syntax: '<number>';
+    initial-value: 0;
+    inherits: false;
+}
+
+@keyframes time {
+    0% {--time: 0}
+    100% {--time: 1}
+}
+
+@property --scroll {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+#background {
+    transform: rotate(5deg);
+
+    animation: time 25s infinite forwards linear;
+
+    --bg-size: 1;
+
+    position: fixed;
+    top: calc(var(--bg-size) * (-50%));
+    left: calc(var(--bg-size) * (-50%));
+    right: calc(var(--bg-size) * (-50%));
+    bottom: calc(var(--bg-size) * (-50%));
+    width: calc(var(--bg-size) * 200vw);
+    height: calc(var(--bg-size) * 200vh);
+  
+    --bg-tile-size: 200px;
+    image-rendering: crisp-edges;
+    background-image: 
+        url("../assets/bg1.png"), 
+        url("../assets/bg2.png");
+    background-position:
+        /* X1 */calc(var(--scroll) * (-.04px) + var(--bg-tile-size) * 2 * var(--time))  
+        /* Y1 */calc(var(--scroll) * (-.40px) + var(--time) * var(--bg-tile-size)),
+        /* X2 */calc(var(--scroll) * (-.04px) + var(--bg-tile-size) / 2 + var(--bg-tile-size) * -2 * var(--time))   
+        /* Y2 */calc(var(--scroll) * (-.40px) + var(--time) * var(--bg-tile-size));
+    background-size: var(--bg-tile-size) var(--bg-tile-size);
+
+    z-index: -55555;
+}

@@ -1,0 +1,19 @@
+{{ define "body" }}
+
+    <div class="changelog-wrapper">
+        <div class="frame changelog-box">
+
+            <h1>{{ .Title }}</h1>
+
+            {{ block "changelog-body" . }}
+                {{ .Content }}
+            {{ end }}
+
+        </div>
+    </div>
+
+{{ end }}
+
+{{ define "append_files" }}
+    {{ .Store.Add "appended_css" (slice "common/changelogs") }}
+{{ end }}

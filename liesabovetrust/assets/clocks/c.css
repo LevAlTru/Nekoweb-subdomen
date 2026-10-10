@@ -1,0 +1,151 @@
+body {
+    /* font-family: sans-serif; */
+    margin: 0;
+    /* overflow-x: hidden; */
+}
+
+/* recreation (if not a blatant copy) of https://codepen.io/kirtivernekar/pen/PoJOMbb */
+
+.clock {
+    fill-opacity: 0;
+    display: grid;
+}
+
+.clock > * {
+    grid-area: 1 / 1;
+    align-self: center;
+    justify-self: center;
+}
+
+.clock > span {
+    transition: color cubic-bezier(.79,.14,.15,.86) 2s;
+    color: var(--timer-text-color);
+    opacity: 1;
+}
+
+.clock > svg {
+    margin: 10px;
+    margin-bottom: 2px;
+    width: auto;
+    aspect-ratio: 1/1;
+}
+
+.clock > svg > circle {
+    transition: stroke-dashoffset linear .33s, 
+        fill-opacity cubic-bezier(.79,.14,.15,.86) 2s,
+        stroke-width cubic-bezier(.79,.14,.15,.86) 2s;
+    stroke-opacity: .3;
+    fill: var(--timer-color);
+    stroke: var(--timer-color);
+    stroke-width: var(--timer-width);
+    transform-origin: center center;
+    transform: rotate(-90deg);
+    cx: 50%;
+    cy: 50%;
+    r: 90px;
+}
+
+.clock > .time {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.clock > .unit {
+    font-weight: 300;
+    transform: translateY(1.5em); 
+}
+
+.clock > svg > circle + circle {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    /* stroke-linecap: square; */
+    stroke-opacity: 1;
+}
+
+body > div {
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    /* max-width: 1250px; */
+    /* grid-template-columns: repeat(auto-fill, calc(var(--grid_collums) * 1%)); */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    /* height: 0; */
+}
+
+body > span {
+    color: var(--col1);
+    text-align: center;
+    justify-self: center;
+    font-size: 32px;
+    display: block;
+    border: none;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > span::before,
+body > span::after {
+    content: "";
+    display: block;
+    background-color: var(--col3);
+    border: none;
+    height: 5px;
+    /* max-width: 1500px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr::after {
+    transform: translateY(20px);
+}
+
+.card {
+    text-decoration: none;
+    /* border: 3px dashed rgb(66, 63, 66); */
+    /* border-radius: 25px; */
+    width: 225px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    /* background-color: rgb(40, 40, 43); */
+
+    display: flex;
+    flex-flow: column;
+}
+
+.card img {
+    border-radius: 10px;
+    width: 100%;
+    background-color: black;
+}
+
+.card span {
+    text-align: center;
+}
+
+.card .title {
+    overflow-x: hidden;
+    font-weight: 700;
+    text-align: center;
+    color: #bdbcbc;
+    margin: 0;
+    font-size: 22px;
+}
+
+.card .desc {
+    /* max-width: 85%; */
+    overflow-x: hidden;
+    font-weight: 500;
+    color: #8b8a8a;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    text-align: center;
+}

@@ -1,0 +1,17 @@
+baseURL = 'https://liesabovetrust.nekoweb.org/'
+locale = 'en-us'
+title = 'LiesAboveTrust powered by GoHugo'
+[contentTypes]
+    [contentTypes.'text/html']
+    [contentTypes.'text/markdown']
+[markup.goldmark.parser.attribute]
+    block = true
+# [security]
+    # enableInlineShortcodes = true
+[server]
+    [[server.redirects]]
+        force = false
+        from = '/**'
+        fromRe = ''
+        status = 404
+        to = '/not_found.html'

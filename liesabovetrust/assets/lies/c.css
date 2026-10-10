@@ -1,0 +1,150 @@
+:root {
+    --scale: 1;
+}
+
+/* @media screen and (width < 1200px) {
+    :root {
+        --scale: 1;
+    }
+} */
+
+@media screen and (width < 800px) {
+    :root {
+        --scale: .5;
+    }
+}
+
+/* @media screen and (width < 400px) {
+    :root {
+        --scale: .33333;
+    }
+} */
+
+/* .sidebar {
+    position: fixed;
+    width: 250px;
+    top: 250px;
+    right: calc(round(50vw, 1px) + calc(var(--wrapper-width) * .6));
+} */
+
+.wrapper {
+    align-items: center;
+    min-height: 100vh;
+}
+
+#anchor {
+    position: relative;
+    anchor-name: --anchor;
+}
+
+.frame1 {
+    font-size: calc(var(--scale) * 24px);
+    margin-top: 3em;
+    margin-bottom: 0px;
+    padding: 50px;
+    /* padding-bottom: 50px; */
+    gap: 1.5em;
+
+    width: var(--wrapper-width);
+    /* min-height: 70vh; */
+    display: flex;
+    flex-direction: column;
+
+    > .hz-flex {
+        gap: 25px;
+
+        > .image-container {
+            flex-shrink: 1;
+            display: flex;
+            max-height: 350px;
+            width: 20vw;
+            gap: 15px;
+
+            > img {
+                object-fit: cover;
+                flex-grow: 0;
+            }
+        }
+    }
+}
+
+div:has(> #gaygif) {
+    height: min(50vw, 50vh);
+    /* max-height: 50vh; */
+}
+
+#gaygif {
+    image-rendering: crisp-edges;
+    object-fit:contain;
+    /* position: absolute; */
+    right: 15vw;
+    /* transform: scale(2); */
+    /* max-height: 40vh; */
+    /* max-width: 50vw; */
+}
+
+.frame1:last-child {
+    margin-bottom: 30vh;
+}
+
+:root {
+    --wrapper-width: max(910px, 50vw)
+}
+
+@media screen and (width < 1300px) {
+    :root {
+        --wrapper-width: 70vw;
+    }
+}
+
+.frame1 > span:first-child {
+    font-size: calc(var(--scale) * 36px);
+    font-weight: 700;
+    text-align: center;
+}
+
+ul {
+    margin: 0px;
+    list-style: "✶ ";
+    padding-inline-start: 50px;
+
+    & li:not(:first-child) {
+        margin-top: 2em;
+    }
+}
+
+.spoiler-box {
+    border: 3px dotted var(--col3);
+    padding: 5px;
+    display: grid;
+    align-items: center;
+    width: fit-content;
+    --hovered: 0;
+}
+
+.spoiler-box:hover {
+    --hovered: 1;
+}
+
+.spoiler-box > * {
+    transition: filter 1s;
+    /* filter: blur(calc((1 - var(--hovered)) * 15px)); */
+    grid-area: 1 / 1;
+    z-index: 0;
+}
+
+.spoiler-box::after {
+    content: "spoilers";
+    text-align: center;
+    align-content: center;
+    height: 100%;
+    background-color: var(--col4);
+    /* box-shadow: 0px 0px 15px 15px #000000; */
+    color: var(--col3);
+    filter: blur(calc((var(--hovered)) * 15px));
+    opacity: calc(1 - var(--hovered));
+    transition: opacity 1s, filter 1s;
+    font-size: calc(var(--scale) * 24px);
+    grid-area: 1 / 1; 
+    z-index: 1;
+}

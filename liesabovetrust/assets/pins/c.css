@@ -1,0 +1,96 @@
+body {
+    /* background-color: #141414; */
+    font-family: sans-serif;
+    margin: 0;
+    /* overflow-x: hidden; */
+}
+
+:root {
+    --collum_count: 1
+}
+
+.pins_collum { display: none; }
+
+.pins_collum:nth-child(1) { display: flex }
+@media screen and (min-width: 450px) {:root { --collum_count: 2 } .pins_collum:nth-child(2) { display: flex }}
+@media screen and (min-width: 700px) {:root { --collum_count: 3 } .pins_collum:nth-child(3) { display: flex; }}
+@media screen and (min-width: 1100px) {:root { --collum_count: 4 } .pins_collum:nth-child(4) { display: flex; }}
+@media screen and (min-width: 1400px) {:root { --collum_count: 5 } .pins_collum:nth-child(5) { display: flex; }}
+@media screen and (min-width: 1800px) {:root { --collum_count: 6 } .pins_collum:nth-child(6) { display: flex; }}
+@media screen and (min-width: 2300px) {:root { --collum_count: 7 } .pins_collum:nth-child(7) { display: flex; }}
+
+:root {
+    --grid_collums: calc(100 / var(--collum_count))
+}
+
+#pins_container {
+    margin: 10px;
+    display: flex;
+    max-width: 100%;
+    /* grid-template-columns: repeat(auto-fill, calc(var(--grid_collums) * 1%)); */
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 16px;
+    /* height: 0; */
+}
+
+.pins_collum {
+    flex-basis: calc(var(--grid_collums) * 1vw);
+    /* flex-basis: 1vw; */
+    flex-grow: 0;
+    flex-shrink: 1;
+    gap: 10px;
+    /* display: flex; inhereted from @media queries */
+    flex-direction: column;
+}
+
+.card {
+    border: 3px dashed var(--col3);
+    border-radius: 15px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    width: 100%;
+    background-color: var(--col4);
+    /* box-shadow: 0px 0px 50px black; */
+}
+
+.card img {
+    border-radius: 10px;
+    width: calc(100% - 10px);
+    background-color: black;
+    margin: 5px;
+}
+
+.card h3 {
+    overflow-x: hidden;
+    font-weight: 300 bold;
+    text-align: center;
+    color: #bdbcbc;
+    margin: 0;
+    font-size: 24px;
+}
+
+.card p {
+    max-width: calc(100 / var(--collum_count) * .90vw);
+    overflow-x: hidden;
+    font-weight: 500;
+    color: #8b8a8a;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+}
+
+#add_new_card {
+    position: fixed;
+    background-color: #141414;
+    text-align: center;
+    right: 10px;
+    top: 10px;
+    width: auto;
+    height: auto;
+    padding: 7px;
+    border-radius: 7px;
+    color: wheat;
+}

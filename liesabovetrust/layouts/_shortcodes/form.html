@@ -1,0 +1,15 @@
+{{- $forms := .Get 0 -}}
+{{- $text := .Get 1 -}}
+
+<!--{{/* <span>olbo {{ print $text -}} </span> */}}-->
+
+{{- $list := "" -}}
+{{- range (strings.Split $forms " ") -}}
+    {{- $entry := (add "text-" .) -}}
+    {{- $list = add (add $list $entry) " " -}}
+{{- end -}}
+<span class="{{- $list -}}">{{- $text -}}</span>
+
+<!--{{/* {{- $list := add "text-" $forms }} */}}-->
+
+<!--{{/* <span class="{{- $list -}}">{{- $text -}}</span> */}}-->

@@ -1,0 +1,27 @@
+html {
+    background-color: #090507;
+    /* overflow: visible; */
+    overflow-x: hidden;
+    /* font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal; */
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    font-size: calc(max(32px, 2vw));
+    /* text-align: center; */
+    text-wrap: stable;
+    margin: 0px;
+    border-bottom-width: 0px;
+    /* padding: 0px; */
+    /* margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    border-bottom-width: 0px; */
+    border-bottom-style: solid;
+}
+
+#meowSquared {
+    color: brown;
+}

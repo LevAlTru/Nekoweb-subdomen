@@ -1,0 +1,43 @@
+.changelog-wrapper {
+    display: flex;
+    justify-content: center;
+
+    /* height: 100%; */
+    /* min-width: 100vh; */
+}
+
+h1 {
+    margin: 0px;
+}
+
+h3 {
+    text-align: center;
+}
+
+h3:not(:first-of-type) {
+    margin-top: 75px;
+}
+
+.changelog-box {
+    margin: 55px;
+    padding: 25px;
+    min-width: 20vw;
+    max-width: 30vw;
+    min-height: 40vh;
+}
+
+@media screen and (width < 1500px) {
+    .changelog-box {
+        max-width: 40vw;
+    }
+}
+
+@media screen and (width < 1000px) {
+    .changelog-box {
+        max-width: 60vw;
+    }
+}
+
+ul li {
+    margin-top: .66em;
+}

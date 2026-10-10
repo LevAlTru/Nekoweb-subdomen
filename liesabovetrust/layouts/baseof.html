@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{{- /*  <html lang="{{- .Site.Language.Lang -}}">  */ -}}
+<html lang="en">
+    <head>
+        {{- partial "base-head.html" . -}}
+        
+        {{- .Store.Set "appended_css" (slice "common/base" "common/background") -}}
+        {{- .Store.Set "appended_js" (slice "common/text_formatting" "common/background_scroll") -}}
+        {{- block "append_files" . -}} {{- end -}}
+
+        {{- $css := slice -}}
+        {{- $stored_css := .Store.Get "appended_css" -}}
+        {{- range $stored_css -}}
+            {{- if gt (strings.Count "" .) 1 -}} {{- $css = $css | append . -}} {{- end -}}
+        {{- end -}}
+        {{- if .Params.css -}} {{- $css = $css | append .Params.css -}} {{- end -}}
+        {{- range $css -}}
+            {{- $raw_path := add . ".css" -}}
+            {{- $reso := resources.Get $raw_path -}}
+            {{- with resources.ExecuteAsTemplate $raw_path $ $reso -}}
+        <link rel="stylesheet" href="{{- (resources.Fingerprint `md5` .).RelPermalink -}}">
+            {{- end -}}
+        {{- end -}}
+
+        {{- $js := slice -}}
+        {{- $stored_js := .Store.Get "appended_js" -}}
+        {{- range $stored_js -}}
+            {{- if gt (strings.Count "" .) 1 -}} {{- $js = $js | append . -}} {{- end -}}
+        {{- end -}}
+        {{- if .Params.js -}} {{- $js = $js | append .Params.js -}} {{- end -}}
+        {{- range $js -}}
+            {{- $raw_path := add . ".js" -}}
+            {{- $reso := resources.Get $raw_path -}}
+            {{- with resources.ExecuteAsTemplate $raw_path $ $reso -}}
+        <script src="{{- (resources.Fingerprint `md5` .).RelPermalink -}}"></script>
+            {{- end -}}
+        {{- end -}}
+    </head>
+    <body class="font-jet">
+        <div id="background"></div>
+        
+        {{- block "body" . -}}
+            {{- .Content -}}
+        {{- end -}}
+
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/</loc>
+  </url><url>
+    <loc>http://localhost:1313/not_found.html</loc>
+  </url><url>
+    <loc>http://localhost:1313/assets/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/changelogs/</loc>
+  </url><url>
+    <loc>http://localhost:1313/clocks/</loc>
+  </url><url>
+    <loc>http://localhost:1313/pins/</loc>
+  </url><url>
+    <loc>http://localhost:1313/e/</loc>
+  </url><url>
+    <loc>http://localhost:1313/symbofall/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/thought-stream/</loc>
+  </url><url>
+    <loc>http://localhost:1313/changelogs/v0.1/</loc>
+  </url><url>
+    <loc>http://localhost:1313/changelogs/v0.2/</loc>
+  </url><url>
+    <loc>http://localhost:1313/changelogs/v0.3/</loc>
+  </url><url>
+    <loc>http://localhost:1313/changelogs/v0.3.1/</loc>
+  </url><url>
+    <loc>http://localhost:1313/changelogs/v0.4/</loc>
+  </url>
+</urlset>
