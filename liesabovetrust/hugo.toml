@@ -1,6 +1,7 @@
 baseURL = 'https://liesabovetrust.nekoweb.org/'
 locale = 'en-us'
 title = 'LiesAboveTrust powered by GoHugo'
+publishDir = 'liesabovetrust.nekoweb.org'
 [contentTypes]
     [contentTypes.'text/html']
     [contentTypes.'text/markdown']
