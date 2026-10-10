@@ -1,2 +1,2 @@
-# Nekoweb subdomen
-Source code of liesabovetrust.nekoweb.org
+# LiesAboveTrust.nekoweb.org Source Code
+Powered by [Gohugo](https://gohugo.io)
