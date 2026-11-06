@@ -12,38 +12,40 @@ title = ''
             <span id="username" class="text-wavy">LiesAboveTrust</span>
             <div class="hz-flex flex-center larger">
                 <div class="left vr-flex flex-around larger">
-                    <a href="#" target="" class="no-deco they"><span>
+                    <!--{{/* <a href="#" target="" class="no-deco they"><span> */}}-->
+                    <span>
                         - He/<span class="text-wavy text-woke">They</span>
-                    </span></a>
+                    </span>
+                    <!--{{/* </a> */}}-->
                     <div>
                         <span>-&thinsp;</span>
-                        <span style="color: #ffdd47;">A</span>
+                        <span style="--tex-col: #ffdd47; color: #ffdd47;">A</span>
                         <div class="scroll a-scroll">
-                            <span style="color: #e4b653;">rtistic</span>
-                            <span style="color: #8b93a5;">gnostic</span>
-                            <span style="color: #a074b4;">voidant</span>
-                            <span style="color: #8187bb;">loof</span>
-                            <span style="color: #bac460;">mbivert</span>
-                            <span style="color: #e4b653;">rtistic</span>
+                            <span style="--sel-col: #e4b653; color: #e4b653;">rtistic</span>
+                            <span style="--sel-col: #8b93a5; color: #8b93a5;">gnostic</span>
+                            <span style="--sel-col: #a074b4; color: #a074b4;">voidant</span>
+                            <span style="--sel-col: #8187bb; color: #8187bb;">loof</span>
+                            <span style="--sel-col: #bac460; color: #bac460;">mbivert</span>
+                            <span style="--sel-col: #e4b653; color: #e4b653;">rtistic</span>
                         </div>
                     </div>
                     <div>
                         <span>-&thinsp;</span>
-                        <span style="color: #fa309f;">B</span>
-                        <span style="color: #1e76e1;">I</span>
+                        <span style="--sel-col: #fa309f; color: #fa309f;">B</span>
+                        <span style="--sel-col: #1e76e1; color: #1e76e1;">I</span>
                         <div class="scroll bi-scroll">
-                            <span style="color: #dfc47c;">polar</span>
-                            <span style="color: #ab6ece;">tch</span>
-                            <span style="color: #74aec9;">lingual</span>
-                            <span style="color: #9dec36;">oreactor</span>
-                            <span style="color: #c54c4c;">ter</span>
-                            <span style="color: #fff1a4;">platonic</span>
-                            <span style="color: #63b87f;">omass</span>
-                            <span style="color: #d8c628;">ohazard</span>
-                            <span style="color: #5daa90;">ased</span>
-                            <span style="color: #d970e2;">-myself</span>
-                            <span style="color: #271212;" onclick="birdcage()" class="unselect">rdcage</span>
-                            <span style="color: #dfc47c;">polar</span>
+                            <span style="--sel-col: #dfc47c; color: #dfc47c;">polar</span>
+                            <span style="--sel-col: #ab6ece; color: #ab6ece;">tch</span>
+                            <span style="--sel-col: #74aec9; color: #74aec9;">lingual</span>
+                            <span style="--sel-col: #9dec36; color: #9dec36;">oreactor</span>
+                            <span style="--sel-col: #c54c4c; color: #c54c4c;">ter</span>
+                            <span style="--sel-col: #fff1a4; color: #fff1a4;">platonic</span>
+                            <span style="--sel-col: #63b87f; color: #63b87f;">omass</span>
+                            <span style="--sel-col: #d8c628; color: #d8c628;">ohazard</span>
+                            <span style="--sel-col: #5daa90; color: #5daa90;">ased</span>
+                            <span style="--sel-col: #d970e2; color: #d970e2;">-myself</span>
+                            <span style="--sel-col: #271212; color: #271212;" onclick="birdcage()" class="unselect">rdcage</span>
+                            <span style="--sel-col: #dfc47c; color: #dfc47c;">polar</span>
                         </div>
                     </div>
                 </div>
@@ -67,15 +69,16 @@ title = ''
         <span>
             Hii!!
             <br>
-            <br>I am still semi-actively working on the website,
+            <br>I am still semi-<del>actively</del> working on the website,
             so don't expect this site to stay in this of
             a uncooked state for a prolonged time.
             <br>
             <br>The box on the very right should be showing 
             the latest updates. The ones with '!' are unread changelogs.
             <br>
-            <br>By the way just fyp i do use LocalStorage, 
-            so in case you don't like that... idk... explode.
+            <br>By the way just fyp i do use LocalStorage
+            and i heavily rely on JS, so in case you don't
+            like that... idk... explode.
             <br>
             <br>Here's the list of all of the pages that are now available:
             {{< insert_pages >}}
@@ -142,23 +145,20 @@ title = ''
     <div class="frame vr-flex" style="grid-row: span 10;" id="todo-list">
         <span>Todo list:</span>
         <dl>
-            <dt class="done">Remake the "Not found page" into a page that allows for checking the website's files</li>
-            <dd class="done">That probably needs a custom pre-upload script to put all of the site files into a json for the 404 page to use</dd>
-            
             <dt class=""><a href="https://liesabovetrust.nekoweb.org/clocks/">Clocks:</a></dt>
             <dd class="">Make a "family" of clocks that occupy one slot. Like Deltarune chapters sharing the same slot because those are related and they don't need to have separate cards</dd>
             <dd class="">Make it so the cards open to full screen with the whole clocks family instead of having an optional URL</dd>
+            <dd class="">Add a script that allows to preview and make the custom clock</dd>
+            <dd class="">Add per-client overrides so people can you the page for their own clocks</dd>
+            <dt class="">Add the shortest timer to homepage</dt>
             <dt class=""><a href="https://liesabovetrust.nekoweb.org/thought-stream/">Thought Stream:</a></dt>
             <dd class="">Make it an actual log and/or a journal instead of whatever nonsense it is right now</dd>
             <dt class=""><a href="https://liesabovetrust.nekoweb.org/pins/">Pinterest?:</a></dt>
             <dd class="">Make the code fetch something useful like my art projects</dd>
             <dt class="">'Handshakes' page?</dt>
             <dt class="">I don't like how lies page is done, but it will live for now.</dt>
-            <dt class="done">Add cache busting</dt>
-            <dt class="done">Add Nekoweb api quirks</dt>
-            <dt class="done">Upload website to Github for proper version control and changelogs</dt>
-            <dt class="done">That one todo to feel good about myself</dt>
-            <dt class="">Add the shortest timer to homepage</dt>
+            <dt class="">I really want to do make something space based, maybe a map</dt>
+            <dt class="">Multiple monochromatic themes?</dt>
         </dl>
     </div>
 

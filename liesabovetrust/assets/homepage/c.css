@@ -70,9 +70,9 @@
             flex-basis: 50%;
         } */
 
-        & .they:hover {
+        /* & .they:hover {
             color: var(--col0);
-        }
+        } */
 
         & span {
             font-size: 24px;

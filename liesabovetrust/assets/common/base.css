@@ -18,6 +18,8 @@
     --col2: #7b3d76;
     --col3: var(--frame-col);
     --col4: var(--frame-bg-col);
+
+    --sel-col: var(--col1)
 }
 
 body {
@@ -25,8 +27,22 @@ body {
     overflow-x: hidden;
 }
 
+::selection {
+    color: #000;
+    background-color: var(--sel-col);
+}
+
+.text-woke > span {
+    --sel-col: var(--woke-col);
+}
+
+code {
+    --sel-col: #7dcf8f;
+}
+
 a:not(.no-deco) {
     color: #a5ced8;
+    --sel-col: #7b91ce; 
     text-decoration: underline;
 }
 
@@ -38,11 +54,7 @@ a.no-deco {
 a:not(.no-deco):visited,
 a:not(.no-deco):hover {
     color: #7b91ce;
-}
-
-::selection {
-    color: #000;
-    background-color: #a95fa4;
+    /* --selection-col: #7b91ce; doesn't work for me? */
 }
 
 .unselect::selection {

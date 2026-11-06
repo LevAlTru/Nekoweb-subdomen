@@ -5,15 +5,15 @@
 */
 
 const WOKE_FRAMES = [
-    {color: 'rgba(224    , 96    , 96    , 1)'},
-    {color: 'rgba(230    , 210   , 96    , 1)'},
-    {color: 'rgba(195    , 232   , 93    , 1)'},
-    {color: 'rgba(135    , 232   , 86    , 1)'},
-    {color: 'rgba(79     , 209   , 207   , 1)'},
-    {color: 'rgba(113    , 74    , 255   , 1)'},
-    {color: 'rgba(175    , 83    , 237   , 1)'},
-    {color: 'rgba(209    , 82    , 171   , 1)'},
-    {color: 'rgba(224    , 96    , 96    , 1)'}
+    {'--woke-col': 'rgba(224    , 96    , 96    , 1)', color: 'rgba(224    , 96    , 96    , 1)'},
+    {'--woke-col': 'rgba(230    , 210   , 96    , 1)', color: 'rgba(230    , 210   , 96    , 1)'},
+    {'--woke-col': 'rgba(195    , 232   , 93    , 1)', color: 'rgba(195    , 232   , 93    , 1)'},
+    {'--woke-col': 'rgba(135    , 232   , 86    , 1)', color: 'rgba(135    , 232   , 86    , 1)'},
+    {'--woke-col': 'rgba(79     , 209   , 207   , 1)', color: 'rgba(79     , 209   , 207   , 1)'},
+    {'--woke-col': 'rgba(113    , 74    , 255   , 1)', color: 'rgba(113    , 74    , 255   , 1)'},
+    {'--woke-col': 'rgba(175    , 83    , 237   , 1)', color: 'rgba(175    , 83    , 237   , 1)'},
+    {'--woke-col': 'rgba(209    , 82    , 171   , 1)', color: 'rgba(209    , 82    , 171   , 1)'},
+    {'--woke-col': 'rgba(224    , 96    , 96    , 1)', color: 'rgba(224    , 96    , 96    , 1)'}
 ]
 const WOKE_PARAM = {
     duration: 5000,
@@ -60,10 +60,12 @@ window.addEventListener('load', function () {
         
         let fun = getAnimations(element)
 
+        const ra = Math.random() * 10000;
+
         Array.from(element.children).forEach((value, i) => {
             fun.forEach(it => {
                 let param = structuredClone(it.param)
-                param.delay = ((i - element.children.length) * it.param.letter_offset)
+                param.delay = ((i - element.children.length) * it.param.letter_offset - ra)
                 //@ts-ignore
                 if (it.name === "wavy") value.style.position = "relative"
                 //@ts-ignore
