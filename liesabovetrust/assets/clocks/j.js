@@ -39,14 +39,23 @@ window.addEventListener("load", () => {
     const hoursInDay = 24
     const daysInMonth = 365.25 / 12
     const monthsInYear = 12
+    const yearInDecade = 10
 
     /** @type {TimeScale[]} */
     const timeScales = []
     timeScales.push(new TimeScale(
+        "Decades", 
+        yearInDecade * monthsInYear * daysInMonth * hoursInDay * 
+            minutesInHour * secoundsInMinute * millisecondsInSecond, 
+        1,
+        8,
+        25
+    ))
+    timeScales.push(new TimeScale(
         "Years", 
         monthsInYear * daysInMonth * hoursInDay * minutesInHour * 
             secoundsInMinute * millisecondsInSecond, 
-        1,
+        yearInDecade,
         7,
         20
     ))
@@ -56,42 +65,42 @@ window.addEventListener("load", () => {
             millisecondsInSecond, 
         monthsInYear,
         6,
-        20
+        15
     ))
     timeScales.push(new TimeScale(
         "Days",
         hoursInDay * minutesInHour * secoundsInMinute * millisecondsInSecond, 
         daysInMonth,
         5,
-        14
+        10
     ))
     timeScales.push(new TimeScale(
         "Hours", 
         minutesInHour * secoundsInMinute * millisecondsInSecond, 
         hoursInDay,
         4,
-        10
+        7
     ))
     timeScales.push(new TimeScale(
         "Minutes", 
         secoundsInMinute * millisecondsInSecond, 
         minutesInHour,
         2,
-        7
+        5
     ))
     timeScales.push(new TimeScale(
         "Seconds", 
         millisecondsInSecond, 
         secoundsInMinute,
         1,
-        5
+        3
     ))
     const unknownTimeScale = new TimeScale(
         "Unknown",
         1,
         1,
         1,
-        10
+        15
     )
 
     /** @param {number} milliseconds @returns {TimeScale} */
@@ -125,6 +134,7 @@ window.addEventListener("load", () => {
      * @param {boolean} timer 
      * @param {string?} link */
     function createCard(title, desc, unixtime, color, timer, link) {
+        let expired = (unixtime >= 0 && unixtime < Date.now() / 1000);
         let card;
         if (link) {
             card = document.createElement("a")
@@ -140,6 +150,7 @@ window.addEventListener("load", () => {
         if (timer) clock.classList.add("timer")
         clock.classList.add("font-jet")
         clock.dataset.unixtime = unixtime.toString()
+        if (!timer || !expired) clock.style.setProperty("--sel-col", color)
         clock.style.setProperty("--timer-color", color)
         clock.style.setProperty("--timer-fill-color", "none")
         clock.style.setProperty("--timer-text-color", color)
@@ -163,19 +174,12 @@ window.addEventListener("load", () => {
 
         let h3 = document.createElement("span")
         h3.classList.add("title")
-        splitStringsToBr(title, h3)
-        // h3.textContent = title
+        h3.style.setProperty("--sel-col", color)
+        h3.innerHTML = title
         let p = document.createElement("span")
         p.classList.add("desc")
-        splitStringsToBr(desc, p)
-        // let a = document.createElement("a")
-
-        // let plines = desc.split("<br>")
-        // for (let i = 0; i < plines.length; i++) {
-        //     const line = plines[i];
-        //     p.append(line)
-        //     if (i < plines.length - 1) p.append(document.createElement("br"))
-        // }
+        p.style.setProperty("--sel-col", color)
+        p.innerHTML = desc
 
         svg.appendChild(circle1)
         svg.appendChild(circle2)
@@ -188,8 +192,7 @@ window.addEventListener("load", () => {
         card.appendChild(p)
 
         let doc = timer ? ( 
-            (unixtime >= 0 && unixtime < Date.now() / 1000) ? // did timer expire
-                expiredTimerContainer : timerContainer
+             expired ? expiredTimerContainer : timerContainer
         ) : clockContainer
 
         let insertedCard = false
@@ -197,8 +200,7 @@ window.addEventListener("load", () => {
             const child = doc.children[i];
             // @ts-ignore
             let clockTime = child.querySelector(".clock").dataset.unixtime
-            if ((timer && unixtime >= 0) ? 
-                    (clockTime > unixtime) : (clockTime < unixtime)) {
+            if (timer && unixtime >= 0 && !expired ? (clockTime > unixtime) : (clockTime < unixtime)) {
                 doc.insertBefore(card, child)
                 insertedCard = true
                 break;
@@ -209,19 +211,9 @@ window.addEventListener("load", () => {
         timers = document.querySelectorAll('.clock')
     }
 
-    /** @param {string} desc @param {Element} h3  */
-    function splitStringsToBr(desc, h3) {
-        let h3lines = desc.split("<br>")
-        for (let i = 0; i < h3lines.length; i++) {
-            const line = h3lines[i]
-            h3.append(line)
-            if (i < h3lines.length - 1) h3.append(document.createElement("br"))
-        }
-    }
-
     function tick() {
 
-        let destiny = new Date(2026, 8, 27, 13, 53)
+        let destiny = new Date(2025, 5, 5, 5, 5)
 
         let now = new Date()
 
@@ -240,7 +232,7 @@ window.addEventListener("load", () => {
             const remainOfWhat = timerElement.querySelector('.unit');
             let dashOffset = 0
             let thickness = scale.thickness
-            if (scale.name != "Years") 
+            if (scale.maxUnits != 1) 
                 dashOffset = (1 - parseFloat(time) / scale.maxUnits);
             else 
                 dashOffset = 0;
@@ -253,8 +245,6 @@ window.addEventListener("load", () => {
                     thickness = 10
                     style.setProperty("fill-opacity", "1")
                     style.setProperty("--timer-text-color", "#000")
-                    // if (remaining) remaining.textContent = "Complete"
-                    // if (remainOfWhat) remainOfWhat.textContent = ""
                     if (remaining) remaining.textContent = time
                     if (remainOfWhat) remainOfWhat.textContent = scale.name
                 } else {
@@ -280,40 +270,24 @@ window.addEventListener("load", () => {
 
     setInterval(tick, 100)
 
-    //@ts-ignore
-    import("{{ (resources.Get (`common/fetch_data.js`) | resources.Fingerprint `md5`).RelPermalink }}")
-    .then(async (module) => {
-        let body = await module.fetchEntries()
-        for (let i = 0; i < body.clocks.length; i++) {
-            const entry = body.clocks[i];
-            createCard(
-                entry.name, 
-                entry.desc, 
-                entry.unix, 
-                entry.color, 
-                entry.timer, 
-                entry.link
-            )
-        }
-    }).catch((err) => {
-        console.error("Dynamic import failed:", err);
-    });
-
-    // fetchAndParseClocks()
-    // async function fetchAndParseClocks() {
-    //     //@ts-ignore
-    //     let body = await fetchEntries()
-    //     for (let i = 0; i < body.clocks.length; i++) {
-    //         const entry = body.clocks[i];
-    //         createCard(
-    //             entry.name, 
-    //             entry.desc, 
-    //             entry.unix, 
-    //             entry.color, 
-    //             entry.timer, 
-    //             entry.link
-    //         )
-    //     }
-    // }
-
+    if (window.location.pathname.includes("/clocks")) {
+        //@ts-ignore
+        import("{{ (resources.Get (`common/fetch_data.js`) | resources.Fingerprint `md5`).RelPermalink }}")
+        .then(async (module) => {
+            let body = await module.fetchEntries()
+            for (let i = 0; i < body.clocks.length; i++) {
+                const entry = body.clocks[i];
+                createCard(
+                    entry.name, 
+                    entry.desc, 
+                    entry.unix, 
+                    entry.color, 
+                    entry.timer, 
+                    entry.link
+                )
+            }
+        }).catch((err) => {
+            console.error("Dynamic import failed:", err);
+        });
+    }
 })

@@ -135,51 +135,6 @@ window.addEventListener("load", () => {
     }
     setGridValueProperty()
 
-    function birdcage() {
-    }
-
-        
-    async function nekowebApiQuirks() {
-        let lastUpdate = "";
-        let views = "";
-        let followers = "";
-        let status = -1;
-        // try {
-            for (let i = 0; i < 1; i++) { // Jump out when `break`
-                let fet = await fetch("https://cors.io/?u=https://nekoweb.org/api/site/info/liesabovetrust.nekoweb.org")
-                if (fet.status != 200) {
-                    status = fet.status
-                    console.warn(fet.statusText);
-                    break
-                }
-                // console.log(await fet.json());
-                /** @type {any} */
-                let outerBody = await fet.json()
-                if (outerBody.status != 200) {
-                    status = outerBody.status
-                    break
-                }
-                let body = await JSON.parse(outerBody.body)
-                console.log(body);
-                lastUpdate = getTimeSince(body.updated_at / 1000)
-                views = body.views
-                followers = body.followers
-            }
-        // } catch (error) {
-        //     console.warn("Nekoweb api fetching error:");
-        //     console.warn(error);
-        // }
-        if (!lastUpdate) lastUpdate = "!" + status.toString() + "!"
-        if (!views) views = "!" + status.toString() + "!"
-        if (!followers) followers = "!" + status.toString() + "!"
-        let updated = document.getElementById("neko-updated")
-        let follows = document.getElementById("neko-follows")
-        let watches = document.getElementById("neko-watches")
-        if (updated) updated.textContent = lastUpdate
-        if (follows) follows.textContent = followers
-        if (watches) watches.textContent = views
-    }
-
     async function nekowebApiQuirks() {
         let lastUpdate = "!~!";
         let views = "!~!";

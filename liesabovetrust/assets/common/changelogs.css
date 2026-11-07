@@ -1,8 +1,10 @@
 .changelog-wrapper {
     display: flex;
     justify-content: center;
+    align-content: center;
 
-    /* height: 100%; */
+    height: calc(100vh - 60px);
+    margin: 25px;
     /* min-width: 100vh; */
 }
 
@@ -19,22 +21,23 @@ h3:not(:first-of-type) {
 }
 
 .changelog-box {
-    margin: 55px;
+    /* margin: 55px; */
+    margin: auto;
     padding: 25px;
     min-width: 20vw;
-    max-width: 30vw;
+    max-width: 40vw;
     min-height: 40vh;
 }
 
 @media screen and (width < 1500px) {
     .changelog-box {
-        max-width: 40vw;
+        max-width: 50vw;
     }
 }
 
 @media screen and (width < 1000px) {
     .changelog-box {
-        max-width: 60vw;
+        max-width: 70vw;
     }
 }
 

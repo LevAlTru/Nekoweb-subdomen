@@ -32,9 +32,10 @@
   
     --bg-tile-size: 200px;
     image-rendering: crisp-edges;
+    background-color: var(--col5);
     background-image: 
-        url("../assets/bg1.png"), 
-        url("../assets/bg2.png");
+        url("../assets/1bg1.png"), 
+        url("../assets/1bg2.png");
     background-position:
         /* X1 */calc(var(--scroll) * (-.04px) + var(--bg-tile-size) * 2 * var(--time))  
         /* Y1 */calc(var(--scroll) * (-.40px) + var(--time) * var(--bg-tile-size)),

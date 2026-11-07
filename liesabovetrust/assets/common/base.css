@@ -18,6 +18,7 @@
     --col2: #7b3d76;
     --col3: var(--frame-col);
     --col4: var(--frame-bg-col);
+    --col5: #0c0a0c;
 
     --sel-col: var(--col1)
 }
