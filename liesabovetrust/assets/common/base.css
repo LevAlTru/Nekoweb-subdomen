@@ -5,22 +5,32 @@
 
     color:aliceblue;
 
-    scrollbar-color: var(--frame-col) #2f2131;
-    scrollbar-gutter: var(--frame-col);
+    scrollbar-color: var(--col3) #2f2131;
 
     --outline-size: 5px;
 
-    --frame-col: #523156;
-    --frame-bg-col: #110f10;
+    --col0a: #ff76f6;
+    --col1a: #a95fa4;
+    --col2a: #7b3d76;
+    --col3a: #523156;
+    --col4a: #110f10;
+    --col5a: #0c0a0c;
 
-    --col0:#ff76f6;
-    --col1: #a95fa4;
-    --col2: #7b3d76;
-    --col3: var(--frame-col);
-    --col4: var(--frame-bg-col);
-    --col5: #0c0a0c;
+    --col0b: #ffb70d;
+    --col1b: #ba8024;
+    --col2b: #91541b;
+    --col3b: #56260b;
+    --col4b: #130903;
+    --col5b: #0f0402;
 
-    --sel-col: var(--col1)
+    --col0: var(--col0a);
+    --col1: var(--col1a);
+    --col2: var(--col2a);
+    --col3: var(--col3a);
+    --col4: var(--col4a);
+    --col5: var(--col5a);
+
+    --sel-col: var(--col1b)
 }
 
 body {
@@ -87,9 +97,9 @@ a:not(.no-deco):hover {
 }
 
 .frame {
-    border: var(--outline-size) var(--frame-col);
+    border: var(--outline-size) var(--col3);
     border-style: solid;
-    background-color: var(--frame-bg-col);
+    background-color: var(--col4);
 }
 
 .hz-flex,

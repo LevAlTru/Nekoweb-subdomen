@@ -1,0 +1,268 @@
+{
+	"lastUpdated": [
+		{
+			"site":"/newindex",
+			"unix":-1
+		},
+		{
+			"site":"/thought-stream",
+			"unix":1790186464
+		}
+	],
+	"updateEntries": [
+		{
+			"name":"New clocks!", 
+			"unix":1790883501, 
+			"link":"/clocks"
+		},
+		{
+			"name":"New index page #2", 
+			"unix":1791039655
+		},
+		{
+			"name":"New index page #3", 
+			"unix":1791198053
+		},
+		{
+			"name":"Index #3.1 buttons", 
+			"unix":1791199886
+		},
+		{
+			"name":"v0.1 - button",
+			"unix":1791207287, 
+			"link":"/changelogs/v0.1"
+		},
+		{
+			"name":"v0.2 - CSS",
+			"unix":1791284303, 
+			"link":"/changelogs/v0.2"
+		},
+		{
+			"name":"v0.3 - Lies",
+			"unix":1791404040, 
+			"link":"/changelogs/v0.3"
+		},
+		{
+			"name":"v0.4 - Go Hugo!",
+			"unix":1791646528, 
+			"link":"/changelogs/v0.4"
+		},
+		{
+			"name":"v0.5",
+			"unix":1793988888, 
+			"link":"/changelogs/v0.5"
+		},
+		{
+			"name":"v0.6 - Clocks",
+			"unix":1794060155, 
+			"link":"/changelogs/v0.6"
+		},
+		{
+			"name":"v0.7 - 350px",
+			"unix":1794173618, 
+			"link":"/changelogs/v0.7"
+		}
+	],
+    "clocks":[
+        {
+            "name":"Knights Of Guinevere Ep2",
+            "desc":"",
+            "unix":1791583200,
+            "color":"#6173c5",
+            "timer":true,
+            "link":"https://youtu.be/vluX-LA1Vc8?si=_4nhCwBSUlgveR8A"
+        },
+        {
+            "name":"Knights Of Guinevere Ep3",
+            "desc":"",
+            "unix":1800658800,
+            "color":"#6173c5",
+            "timer":true,
+            "link":"https://youtu.be/4-sO_dp1fkE?si=7KFsh3sLtBDu2q0G"
+        },
+        {
+            "name":"Knights Of Guinevere Ep4",
+            "desc":"",
+            "unix":1807912800,
+            "color":"#6173c5",
+            "timer":true,
+            "link":"https://youtu.be/4-sO_dp1fkE?si=7KFsh3sLtBDu2q0G"
+        },
+        {
+            "name":"Stick Fight:<br>The Game",
+            "desc":"Since purchasing the first Steam game",
+            "unix":1492429500,
+            "color":"#dd403d",
+            "timer":false,
+            "link":"https://store.steampowered.com/app/674940"
+        },
+        {
+            "name":"Discord",
+            "desc":"Since creating current Discord account",
+            "unix":1491732000,
+            "color":"#5662f6",
+            "timer":false,
+            "link":"https://discord.com"
+        },
+        {
+            "name":"Outer Wilds",
+            "desc":"Since purchasing<br>Outer Wilds and<br>Echoes of the Eye",
+            "unix":1640651400,
+            "color":"#f58f24",
+            "timer":false,
+            "link":"https://store.steampowered.com/dlc/753640/Outer_Wilds"
+        },
+        {
+            "name":"",
+            "desc":"",
+            "unix":1173092400,
+            "color":"#684573",
+            "timer":false,
+            "link":"https://liesabovetrust.nekoweb.org"
+        },
+        {
+            "name":"Adastra",
+            "desc":"Since finishing the first playthough",
+            "unix":1790278800,
+            "color":"#d67cbb",
+            "timer":false,
+            "link":"https://echoproject.itch.io/adastra"
+        },
+        {
+            "name":"Interea",
+            "desc":"Since last update",
+            "unix":1655546400,
+            "color":"#c47cd6",
+            "timer":false,
+            "link":"https://echoproject.itch.io/interea"
+        },
+        {
+            "name":"Khemia",
+            "desc":"Since last update",
+            "unix":1759485600,
+            "color":"#d67c8e",
+            "timer":false,
+            "link":"https://echoproject.itch.io/khemia"
+        },
+        {
+            "name":"Risk Of Rain 2:<br>Hallowed Concepts",
+            "desc":"<del>Before</del> release date <del>announcement</del>",
+            "unix":1791475200,
+            "color":"#baf096",
+            "timer":true,
+            "link":"https://www.youtube.com/watch?v=-smMrK6XKJY"
+        },
+        {
+            "name":"Since November",
+            "desc":"Since finishing the first playthough",
+            "unix":1790883000,
+            "color":"#e63d1b",
+            "timer":false,
+            "link":"https://keithballard.itch.io/since-november"
+        },
+        {
+            "name":"ECHO: TJ",
+            "desc":"i see myself in Chase.",
+            "unix":1793387411,
+            "color":"#5699bf",
+            "timer":false,
+            "link":"https://echoproject.itch.io/echo"
+        },
+        {
+            "name":"ECHO: Flynn",
+            "desc":"i have no idea what and how and why is going on.",
+            "unix":1793562487,
+            "color":"#ab7217",
+            "timer":false,
+            "link":"https://echoproject.itch.io/echo"
+        },
+        {
+            "name":"ECHO: Carl<br>(James)",
+            "desc":"no seriously, i'm starting to lose the plot.",
+            "unix":1794099817,
+            "color":"#255226",
+            "timer":false,
+            "link":"https://echoproject.itch.io/echo"
+        },
+        {
+            "name":"ECHO: Carl<br>(John)",
+            "desc":"The only good ending?",
+            "unix":1794137346,
+            "color":"#255226",
+            "timer":false,
+            "link":"https://echoproject.itch.io/echo"
+        },
+        {
+            "name":"Mystery Skulls:<br>Finale",
+            "desc":"",
+            "unix":1793142000,
+            "color":"#f117f0",
+            "timer":true,
+            "link":"https://youtu.be/z2LxYvA49sk?si=lp6qeUEZt3Lx62TV"
+        },
+        {
+            "name":"GAMEOVERSE Ep2",
+            "desc":"",
+            "unix":1810936800,
+            "color":"#9a9af9",
+            "timer":true,
+            "link":"https://youtu.be/-jknl-GNjDw?si=D0qP0CoSadDGO95z"
+        },
+        {
+            "name":"GAMEOVERSE Ep3",
+            "desc":"",
+            "unix":1819404000,
+            "color":"#9a9af9",
+            "timer":true,
+            "link":"https://youtu.be/-jknl-GNjDw?si=D0qP0CoSadDGO95z"
+        },
+        {
+            "name":"GAMEOVERSE Ep4",
+            "desc":"",
+            "unix":1824847200,
+            "color":"#9a9af9",
+            "timer":true,
+            "link":"https://youtu.be/-jknl-GNjDw?si=D0qP0CoSadDGO95z"
+        },
+        {
+            "name":"Deltarune ch6",
+            "desc":"",
+            "unix":-21,
+            "color":"#ff0000",
+            "timer":true,
+            "link":"https://deltarune.com"
+        },
+        {
+            "name":"Deltarune ch7",
+            "desc":"<span style=\"color: transparent;\">proceed.</span>",
+            "unix":-22,
+            "color":"#ff0000",
+            "timer":true,
+            "link":"https://deltarune.com"
+        },
+        {
+            "name":"Silksong:<br>Sea of sorrow",
+            "desc":"",
+            "unix":-10,
+            "color":"#69dbe5",
+            "timer":true,
+            "link":"https://youtu.be/qDFEeeLy6ws?si=nleZKDK_GTHZbIcr"
+        },
+        {
+            "name":"ENA: Dream BBQ",
+            "desc":"",
+            "unix":-50,
+            "color":"#8db9be",
+            "timer":true,
+            "link":"https://joelgc.com"
+        },
+        {
+            "name":"December Holiday",
+            "desc":"",
+            "unix":1798203300,
+            "color":"#51b6db",
+            "timer":true,
+            "link":""
+        }
+    ]
+}

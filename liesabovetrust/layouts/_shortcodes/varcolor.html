@@ -1,0 +1,10 @@
+{{- $text := .Get 0 -}}
+{{- $col1 := .Get 1 -}}
+{{- $col2 := .Get 2 -}}
+{{- if and $col1 $col2 -}}
+<span style="--sel-col: var(--{{- $col2 -}}); color: var(--{{- $col1 -}});">{{- $text -}}</span>
+{{- else if $col1 -}}
+<span style="--sel-col: var(--{{- $col1 -}}); color: var(--{{- $col1 -}});">{{- $text -}}</span>
+{{- else if $col2 -}}
+<span style="--sel-col: var(--{{- $col2 -}});">{{- $text -}}</span>
+{{- end -}}

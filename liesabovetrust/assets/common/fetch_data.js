@@ -15,12 +15,15 @@ import("{{ (resources.Get (`common/fetch_data.js`) | resources.Fingerprint `md5`
 */
 /** @returns {Promise<any>} */
 export async function fetchEntries() {
-    let fetcher = await fetch("https://cors.io/?u=https://pastebin.com/raw/1BrbMHt2")
+    // let fetcher = await fetch("https://cors.io/?u=https://pastebin.com/raw/1BrbMHt2")
+    let fetcher = await fetch("../assets/data.json")
     if (fetcher.status != 200) {
-        console.error("Error while fetching data from Pastebin.com.", fetcher.statusText, fetcher);
+        // console.error("Error while fetching data from Pastebin.com.", fetcher.statusText, fetcher);
+        console.error("Error while fetching data.", fetcher.statusText, fetcher);
         return {}
     }
     let fetchjson = await fetcher.json()
-    let body = JSON.parse(fetchjson.body)
-    return body;
+    // let body = JSON.parse(fetchjson.body)
+    // let body = JSON.parse(fetcher.body)
+    return fetchjson;
 }

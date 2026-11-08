@@ -9,7 +9,7 @@
                 {{ .Content }}
 
                 <ul>
-                    {{ range .Pages }}
+                    {{ range (sort .Pages "Title" "desc") }}
                     <li><a href="{{- .RelPermalink -}}" style="font-size: 24px;">{{ .LinkTitle }}</a></li>
                     {{ end }}
                 </ul>
