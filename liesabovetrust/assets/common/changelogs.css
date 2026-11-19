@@ -44,3 +44,15 @@ h3:not(:first-of-type) {
 ul li {
     margin-top: .66em;
 }
+
+.backbutton {
+    color: var(--col1);
+    font-weight: 900;
+    font-size: 24px;
+    margin-left: 25px;
+    transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.backbutton:hover {
+    color: var(--col0);
+}

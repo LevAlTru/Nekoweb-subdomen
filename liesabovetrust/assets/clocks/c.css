@@ -1,3 +1,11 @@
+@property --col0 { syntax: "<color>"; inherits: true; initial-value: #000000; }
+@property --col1 { syntax: "<color>"; inherits: true; initial-value: #000000; }
+@property --col2 { syntax: "<color>"; inherits: true; initial-value: #000000; }
+@property --col3 { syntax: "<color>"; inherits: true; initial-value: #000000; }
+@property --col4 { syntax: "<color>"; inherits: true; initial-value: #000000; }
+@property --col5 { syntax: "<color>"; inherits: true; initial-value: #000000; }
+
+
 body {
     /* font-family: sans-serif; */
     margin: 0;
@@ -62,6 +70,25 @@ body {
     stroke-opacity: 1;
 }
 
+a {
+    transition: 
+        --col0 cubic-bezier(0.19, 1, 0.22, 1) 1s,
+        --col1 cubic-bezier(0.19, 1, 0.22, 1) 1s,
+        --col2 cubic-bezier(0.19, 1, 0.22, 1) 1s,
+        --col3 cubic-bezier(0.19, 1, 0.22, 1) 1s,
+        --col4 cubic-bezier(0.19, 1, 0.22, 1) 1s,
+        --col5 cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+a.card:hover {
+    --col0: var(--col0b);
+    --col1: var(--col1b);
+    --col2: var(--col2b);
+    --col3: var(--col3b);
+    --col4: var(--col4b);
+    --col5: var(--col5b);
+}
+
 body > div {
     margin: 10px;
     margin-left: auto;
@@ -112,7 +139,6 @@ hr::after {
     width: 225px;
     flex-grow: 0;
     flex-shrink: 0;
-    /* background-color: rgb(40, 40, 43); */
 
     display: flex;
     flex-flow: column;

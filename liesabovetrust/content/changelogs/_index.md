@@ -4,4 +4,5 @@ type = 'changelogs'
 [params]
     css = []
     js = []
+    golden = true
 +++

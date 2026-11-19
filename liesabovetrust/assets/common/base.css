@@ -5,7 +5,7 @@
 
     color:aliceblue;
 
-    scrollbar-color: var(--col3) #2f2131;
+    scrollbar-color: var(--scroll-col-a) var(--scroll-col-b);
 
     --outline-size: 5px;
 
@@ -30,7 +30,7 @@
     --col4: var(--col4a);
     --col5: var(--col5a);
 
-    --sel-col: var(--col1b)
+    --sel-col: var(--col1);
 }
 
 body {
@@ -51,26 +51,38 @@ code {
     --sel-col: #7dcf8f;
 }
 
-a:not(.no-deco) {
+a:not(.no-deco):link {
     color: #a5ced8;
-    --sel-col: #7b91ce; 
+    --sel-col: #7b91ce;
     text-decoration: underline;
 }
 
-a.no-deco {
+a.no-deco:link {
     color: unset;
     text-decoration: unset;
 }
 
 a:not(.no-deco):visited,
-a:not(.no-deco):hover {
+a:not(.no-deco):hover,
+a:not(.no-deco):active {
     color: #7b91ce;
-    /* --selection-col: #7b91ce; doesn't work for me? */
 }
 
 .unselect::selection {
     color: unset;
     background-color: unset;
+}
+
+.happy-spot:not(.revealed) {
+    display: none;
+    visibility: hidden;
+}
+
+.happiness {
+    background-image: url(../assets/chaos/_\ \(7\).svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* || FONTS */
@@ -89,6 +101,26 @@ a:not(.no-deco):hover {
 }
 
 /* || BULDING BLOCKS */
+
+.lavender {
+    --col0: var(--col0a);
+    --col1: var(--col1a);
+    --col2: var(--col2a);
+    --col3: var(--col3a);
+    --col4: var(--col4a);
+    --col5: var(--col5a);
+    --sel-col: var(--col1);
+}
+
+.golden {
+    --col0: var(--col0b);
+    --col1: var(--col1b);
+    --col2: var(--col2b);
+    --col3: var(--col3b);
+    --col4: var(--col4b);
+    --col5: var(--col5b);
+    --sel-col: var(--col1);
+}
 
 .unframe,
 .frame {

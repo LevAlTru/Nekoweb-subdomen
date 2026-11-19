@@ -33,9 +33,9 @@
     --bg-tile-size: 200px;
     image-rendering: crisp-edges;
     background-color: var(--col5);
-    background-image: 
+    /* background-image: 
         url("../assets/1bg1.png"), 
-        url("../assets/1bg2.png");
+        url("../assets/1bg2.png"); */
     background-position:
         /* X1 */calc(var(--scroll) * (-.04px) + var(--bg-tile-size) * 2 * var(--time))  
         /* Y1 */calc(var(--scroll) * (-.40px) + var(--time) * var(--bg-tile-size)),
@@ -44,4 +44,16 @@
     background-size: var(--bg-tile-size) var(--bg-tile-size);
 
     z-index: -55555;
+}
+
+#background.lavender {
+    background-image: 
+        url("../assets/1bg1.png"), 
+        url("../assets/1bg2.png");
+}
+
+#background.golden {
+    background-image: 
+        url("../assets/2bg1.png"), 
+        url("../assets/2bg2.png");
 }

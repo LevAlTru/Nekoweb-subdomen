@@ -5,8 +5,17 @@
         {{- partial "base-head.html" . -}}
         
         {{- .Store.Set "appended_css" (slice "common/base" "common/background") -}}
-        {{- .Store.Set "appended_js" (slice "common/text_formatting" "common/background_scroll") -}}
+        {{- .Store.Set "appended_js" (slice "common/text_formatting") -}}
+        {{- if not .Params.noback -}}
+            {{- .Store.Add "appended_js" (slice "common/background_scroll") -}}
+        {{- end -}}
         {{- block "append_files" . -}} {{- end -}}
+
+        {{- if .Params.golden -}}
+        <link rel="stylesheet" href="{{- (resources.Fingerprint `md5` (resources.Get `common/scroll_golden.css`)).RelPermalink -}}">
+        {{- else -}}
+        <link rel="stylesheet" href="{{- (resources.Fingerprint `md5` (resources.Get `common/scroll_lavender.css`)).RelPermalink -}}">
+        {{- end -}}
 
         {{- $css := slice -}}
         {{- $stored_css := .Store.Get "appended_css" -}}
@@ -32,13 +41,15 @@
             {{- $raw_path := add . ".js" -}}
             {{- $reso := resources.Get $raw_path -}}
             {{- with resources.ExecuteAsTemplate $raw_path $ $reso -}}
-        <script src="{{- (resources.Fingerprint `md5` .).RelPermalink -}}"></script>
+        <script src="{{- (resources.Fingerprint `md5` .).RelPermalink -}}" defer></script>
             {{- end -}}
         {{- end -}}
     </head>
     <body class="font-jet">
-        <div id="background"></div>
-        
+        {{- if not .Params.noback -}}
+            <div id="background" class="{{- if .Params.golden -}} {{- print `golden` -}} {{- else -}} {{- print `lavender` -}} {{- end -}}"></div>
+        {{- end -}}
+
         {{- block "body" . -}}
             {{- .Content -}}
         {{- end -}}

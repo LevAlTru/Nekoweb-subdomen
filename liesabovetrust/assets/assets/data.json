@@ -61,6 +61,11 @@
 			"name":"v0.7 - 350px",
 			"unix":1794173618, 
 			"link":"/changelogs/v0.7"
+		},
+		{
+			"name":"v0.8 - Golden",
+			"unix":1795108423, 
+			"link":"/changelogs/v0.8"
 		}
 	],
     "clocks":[
@@ -189,6 +194,14 @@
             "desc":"The only good ending?",
             "unix":1794137346,
             "color":"#255226",
+            "timer":false,
+            "link":"https://echoproject.itch.io/echo"
+        },
+        {
+            "name":"ECHO: Jenna",
+            "desc":"TWO GOOD ENDINGS???",
+            "unix":1794674170,
+            "color":"#d3ab3d",
             "timer":false,
             "link":"https://echoproject.itch.io/echo"
         },

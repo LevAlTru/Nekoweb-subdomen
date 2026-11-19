@@ -16,7 +16,8 @@ import("{{ (resources.Get (`common/fetch_data.js`) | resources.Fingerprint `md5`
 /** @returns {Promise<any>} */
 export async function fetchEntries() {
     // let fetcher = await fetch("https://cors.io/?u=https://pastebin.com/raw/1BrbMHt2")
-    let fetcher = await fetch("../assets/data.json")
+    // let fetcher = await fetch("../assets/data.json", { cache: "reload" })
+    let fetcher = await fetch("https://raw.githubusercontent.com/LevAlTru/Nekoweb-subdomen/refs/heads/main/liesabovetrust/assets/assets/data.json", { cache: "reload" })
     if (fetcher.status != 200) {
         // console.error("Error while fetching data from Pastebin.com.", fetcher.statusText, fetcher);
         console.error("Error while fetching data.", fetcher.statusText, fetcher);

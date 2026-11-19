@@ -64,12 +64,12 @@ window.addEventListener('load', function () {
 
         Array.from(element.children).forEach((value, i) => {
             fun.forEach(it => {
-                let param = structuredClone(it.param)
-                param.delay = ((i - element.children.length) * it.param.letter_offset - ra)
+                // let param = structuredClone(it.param)
+                it.param.delay = ((i - element.children.length) * it.param.letter_offset - ra)
                 //@ts-ignore
                 if (it.name === "wavy") value.style.position = "relative"
                 //@ts-ignore
-                value.animate(it.frames, param)
+                value.animate(it.frames, it.param)
             })
         })
     }

@@ -1,9 +1,12 @@
 {{ define "body" }}
 
     <div class="changelog-wrapper">
-        <div class="frame changelog-box">
+        <div class="frame changelog-box golden">
 
-            <h1>{{ .Title }}</h1>
+            <div class="hz-flex flex-between">
+                <h1>{{ .Title }}</h1>
+                <a class="backbutton no-deco" href="../"><-</a>
+            </div>
 
             {{ block "changelog-body" . }}
                 {{ .Content }}
