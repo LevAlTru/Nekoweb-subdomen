@@ -335,10 +335,21 @@ function tick() {
 
 setInterval(tick, 100)
 
-if (window.location.pathname.includes("/clocks")) {
-    //@ts-ignore
-    import("{{ (resources.Get (`common/fetch_data.js`) | resources.Fingerprint `md5`).RelPermalink }}")
-    .then(async (module) => {
+//@ts-ignore
+import("{{ (resources.Get (`common/fetch_data.js`) | resources.Fingerprint `md5`).RelPermalink }}")
+.then(async (module) => {
+    if (window.location.pathname.includes("/clocks")) {
+        let clocksHappy = false;
+
+        //@ts-ignore
+        await import("{{ (resources.Get (`common/happy-spot.js`) | resources.Fingerprint `md5`).RelPermalink }}")
+        .then(async (module) => {
+            let happiness = await module.allowHappiness()
+            clocksHappy = happiness
+        }).catch((err) => {
+            console.error("Happy spot foreseeing failure:", err);
+        });
+
         let body = await module.fetchEntries()
         for (let i = 0; i < body.clocks.length; i++) {
             const entry = body.clocks[i];
@@ -351,9 +362,10 @@ if (window.location.pathname.includes("/clocks")) {
                 entry.link
             )
         }
-        if (Math.random() < 0.03) createHappyCard()
-    }).catch((err) => {
-        console.error("Dynamic import failed:", err);
-    });
-}
+
+        if (clocksHappy) createHappyCard()
+    }
+}).catch((err) => {
+    console.error("Dynamic import failed:", err);
+});
 // })

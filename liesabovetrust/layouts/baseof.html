@@ -5,9 +5,10 @@
         {{- partial "base-head.html" . -}}
         
         {{- .Store.Set "appended_css" (slice "common/base" "common/background") -}}
-        {{- .Store.Set "appended_js" (slice "common/text_formatting") -}}
+        {{- .Store.Set "appended_modules" (slice "common/text_formatting") -}}
+        {{- .Store.Set "appended_js" (slice) -}}
         {{- if not .Params.noback -}}
-            {{- .Store.Add "appended_js" (slice "common/background_scroll") -}}
+            {{- .Store.Add "appended_modules" (slice "common/background_scroll") -}}
         {{- end -}}
         {{- block "append_files" . -}} {{- end -}}
 
@@ -28,6 +29,20 @@
             {{- $reso := resources.Get $raw_path -}}
             {{- with resources.ExecuteAsTemplate $raw_path $ $reso -}}
         <link rel="stylesheet" href="{{- (resources.Fingerprint `md5` .).RelPermalink -}}">
+            {{- end -}}
+        {{- end -}}
+
+        {{- $mdl := slice -}}
+        {{- $stored_mdl := .Store.Get "appended_modules" -}}
+        {{- range $stored_mdl -}}
+            {{- if gt (strings.Count "" .) 1 -}} {{- $mdl = $mdl | append . -}} {{- end -}}
+        {{- end -}}
+        {{- if .Params.mdl -}} {{- $mdl = $mdl | append .Params.mdl -}} {{- end -}}
+        {{- range $mdl -}}
+            {{- $raw_path := add . ".js" -}}
+            {{- $reso := resources.Get $raw_path -}}
+            {{- with resources.ExecuteAsTemplate $raw_path $ $reso -}}
+        <script type="module" src="{{- (resources.Fingerprint `md5` .).RelPermalink -}}" defer></script>
             {{- end -}}
         {{- end -}}
 

@@ -1,6 +1,8 @@
 +++
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 [params]
-    csss = []
-    jss = []
+    css = []
+    js = []
+    mdl = []
+    golden = false
 +++
