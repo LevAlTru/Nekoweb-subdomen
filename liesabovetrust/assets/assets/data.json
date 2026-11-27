@@ -206,6 +206,14 @@
             "link":"https://echoproject.itch.io/echo"
         },
         {
+            "name":"ECHO: Leo",
+            "desc":"Three good endings. I'm sorry Leo; i hope all 7 of you will reunite again.",
+            "unix":1795822858,
+            "color":"#6c2e22",
+            "timer":false,
+            "link":"https://echoproject.itch.io/echo"
+        },
+        {
             "name":"Mystery Skulls:<br>Finale",
             "desc":"",
             "unix":1793142000,
